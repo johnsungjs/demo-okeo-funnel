@@ -1,0 +1,77 @@
+:root {
+  font-family: 'Quicksand', sans-serif;
+
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+
+body {
+  margin: 0;
+  /* display: flex; */
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.mantine-AppShell-root {
+  width: calc(100vw);
+}
+
+.mantine-AppShell-main {
+  height: 100dvh;
+  width: 100%;
+}
+
+.breadcrumbs-container {
+  position: relative;
+  top: calc(0px - var(--app-shell-padding));
+  left: calc(0px - var(--app-shell-padding));
+  width: calc(100% + (2 * var(--app-shell-padding)));
+  background-color: #eee;
+  display: flex;
+  height: 50px;
+  align-items: center;
+  padding-left: var(--app-shell-padding);
+  padding-right: var(--app-shell-padding);
+}
+
+.mantine-Modal-root {
+  width: 100vw;
+}
+
+.mantine-Drawer-root {
+  width: 100vw;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+
+
+  button {
+    background-color: #f9f9f9;
+  }
+}
