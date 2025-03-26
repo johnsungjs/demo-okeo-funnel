@@ -64,6 +64,10 @@ button:focus-visible {
   width: 100vw;
 }
 
+.custom-textarea {
+  background-color: red !important;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;

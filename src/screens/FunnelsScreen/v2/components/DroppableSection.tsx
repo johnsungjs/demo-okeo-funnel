@@ -1,4 +1,11 @@
-import { BackgroundImage, Flex, Group, Stack, Text } from "@mantine/core";
+import {
+  BackgroundImage,
+  Flex,
+  Group,
+  Stack,
+  Text,
+  Textarea,
+} from "@mantine/core";
 import { UseFormReturnType } from "@mantine/form";
 import { Property } from "csstype";
 import {
@@ -29,7 +36,6 @@ export default function DroppableSection({
   setActiveSection,
   funnelsForm,
 }: DroppableSection) {
-
   const getAlignFlex = (indexDroppable: number) => {
     if (indexDroppable === null) {
       return "center";
@@ -137,8 +143,9 @@ export default function DroppableSection({
                             >
                               <BackgroundImage
                                 src={(component as JumbotronRecord).background!}
-                                h={200}
+                                h={"100%"}
                                 w={"100%"}
+                                py={24}
                               >
                                 <Stack
                                   h={"100%"}
@@ -147,36 +154,28 @@ export default function DroppableSection({
                                   align={getAlignFlex(index)}
                                   justify={"center"}
                                 >
-                                  <input
-                                    className={style.titleBanner}
-                                    style={{
-                                      outline: "none",
-                                      background: "transparent",
-                                      border: "none",
-                                      fontSize: "24px",
-                                      textAlign: getAlignText(index),
-                                      fontWeight: 700,
+                                  <Textarea
+                                    autosize
+                                    styles={{
+                                      input: {backgroundColor: 'transparent', outline: 'none', border: 'none'},
                                     }}
                                     placeholder="Your Title"
                                     {...funnelsForm.getInputProps(
                                       `state.${index}.title`
                                     )}
                                   />
-                                  <input
+                                  <Textarea
+                                    autosize
                                     className={style.subtitleBanner}
-                                    style={{
-                                      outline: "none",
-                                      background: "transparent",
-                                      border: "none",
-                                      fontSize: "18px",
-                                      textAlign: getAlignText(index),
-                                      fontWeight: 600,
+                                    styles={{
+                                      input: {backgroundColor: 'transparent', outline: 'none', border: 'none'},
                                     }}
                                     placeholder="Your Subtitle"
                                     {...funnelsForm.getInputProps(
                                       `state.${index}.subtitle`
                                     )}
                                   />
+                                  {/* TODOOOOO SAMAKAN DENGAN STLYLE EXISTING */}
                                 </Stack>
                               </BackgroundImage>
                             </DraggableWithToggle>
