@@ -2,6 +2,7 @@ import { DndContext, DragEndEvent } from "@dnd-kit/core";
 import { Flex, Stack, Text } from "@mantine/core";
 import { useForm, UseFormReturnType } from "@mantine/form";
 import { LegacyRef, useRef, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import {
   JumbotronRecord,
   ThreeGridRecord,
@@ -18,6 +19,7 @@ import { WEBCOMPONENTTYPE } from "./utils/webComponentType";
 export default function FunnelScreen1() {
   const droppableRef: LegacyRef<HTMLDivElement> | undefined = useRef(null);
   const [activeSection, setActiveSection] = useState<number | null>(null);
+  const navigate = useNavigate();
 
   //nanti abis ini caritau cara ubah form didalem useForm ini
   const funnelsForm: UseFormReturnType<FunnelForm> = useForm<FunnelForm>({
@@ -136,9 +138,22 @@ export default function FunnelScreen1() {
       onClick={() => setActiveSection(null)}
       style={{ overflow: "hidden", margin: 0, padding: 0 }}
     >
-      <Text size={"xl"} ta={"center"} fw={700}>
-        Okeo Funnel v1
-      </Text>
+      <div
+        style={{
+          flex: 0,
+          border: "0px solid red",
+          padding: "24px 24px",
+          display: "flex",
+          gap: 24,
+        }}
+      >
+        <button style={{ borderRadius: "8px" }} onClick={() => navigate(-1)}>
+          back
+        </button>
+        <Text size={"xl"} ta={"center"} fw={700}>
+          Okeo Funnel v1
+        </Text>
+      </div>
       <DndContext
         onDragEnd={handleDragEnd}
         // autoScroll={{ layoutShiftCompensation: false, enabled: false }}

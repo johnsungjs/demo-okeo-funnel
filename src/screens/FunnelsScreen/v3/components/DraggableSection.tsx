@@ -60,7 +60,7 @@ export default function DraggableSection() {
           style={{
             position: "fixed",
             width: "283px",
-            top: "30px",
+            top: "84px",
             left: "20px",
             zIndex: 1,
             opacity: 0.5,
