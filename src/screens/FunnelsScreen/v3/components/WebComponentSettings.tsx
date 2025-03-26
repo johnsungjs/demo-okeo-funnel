@@ -1,4 +1,4 @@
-import { Button, Drawer, Group, Text, TextInput } from "@mantine/core";
+import { Button, Drawer, Group, Text } from "@mantine/core";
 import { UseFormReturnType } from "@mantine/form";
 import { useDisclosure } from "@mantine/hooks";
 import { FloatingLabelInput, ImageInput } from "@okeo/okeo-components";
@@ -51,15 +51,13 @@ export default function WebComponentSettings({
             <form>
               <FloatingLabelInput
                 label={"Title"}
-                placeholder="Insert Your Text"
+                placeholder="Insert Your Title"
                 {...funnelsForm.getInputProps(`state.${activeSection}.title`)}
               />
-              <TextInput
-                label={"Sutitle"}
-                placeholder="Insert Your Text"
-                {...funnelsForm.getInputProps(
-                  `state.${activeSection}.subtitle`
-                )}
+              <FloatingLabelInput
+                label={"Subtitle"}
+                placeholder="Insert Your Subtitle"
+                {...funnelsForm.getInputProps(`state.${activeSection}.subtitle`)}
               />
               <div
                 style={{

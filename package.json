@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@dnd-kit/core": "^6.3.1",
-    "@okeo/okeo-components": "https://gitlab.com/api/v4/projects/66686056/packages/npm/@okeo/okeo-components/-/@okeo/okeo-components-0.0.2-alpha33.tgz",
+    "@okeo/okeo-components": "0.0.2-alpha38",
     "@reduxjs/toolkit": "^2.3.0",
     "i18next": "^23.16.5",
     "i18next-browser-languagedetector": "^8.0.0",
