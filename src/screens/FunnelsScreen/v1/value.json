@@ -1,0 +1,64 @@
+[
+  {
+      "openingTag": "<h1>",
+      "closingTag": "</h1>",
+      "value": "Your Title",
+      "style": {
+          "width": "100%",
+          "borderWidth": 5,
+          "borderStyle": "solid",
+          "borderColor": "grey",
+          "margin": "0 auto",
+          "padding": "12px auto",
+          "display": "block",
+          "fontSize": 22,
+          "textAlign": "center",
+          "color": "black",
+          "background": "transparent"
+      }
+  },
+  {
+      "openingTag": "<h2>",
+      "closingTag": "</h2>",
+      "value": "Your Subtitle",
+      "style": {
+          "width": "100%",
+          "borderWidth": 5,
+          "borderStyle": "solid",
+          "borderColor": "yellow",
+          "margin": "0 auto",
+          "padding": "4px auto",
+          "display": "block",
+          "fontSize": 16,
+          "textAlign": "center",
+          "color": "black",
+          "background": "transparent"
+      }
+  },
+  {
+      "openingTag": "<button>",
+      "closingTag": "</button>",
+      "value": "button",
+      "style": {
+          "width": "100px",
+          "margin": "0 auto",
+          "display": "block",
+          "fontSize": 16,
+          "textAlign": "center",
+          "color": "white",
+          "background": "blue",
+          "borderWidth": 0
+      }
+  },
+  {
+      "openingTag": "<p>",
+      "closingTag": "</p>",
+      "value": "Tambahkan Komponen Disini",
+      "style": {
+          "width": "100%",
+          "fontSize": 12,
+          "textAlign": "center",
+          "padding": "10px 0"
+      }
+  }
+]
