@@ -35,7 +35,7 @@ export default function SimpleEditor({ value, onChange, textAlign }: SimpleEdito
   }, [isActive]); // Autofocus when the editor becomes active
 
   return (
-    <div ref={containerRef} style={{ padding: "0px", maxWidth: "150px", border: "2px solid red" }}>
+    <div ref={containerRef} style={{ padding: "0px", maxWidth: "150px" }}>
       {isActive ? (
         <Editor ref={editorRef} htmlContent={value || ""} onHtmlChange={onChange} />
       ) : (
