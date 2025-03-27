@@ -2,7 +2,6 @@ import { DndContext, DragEndEvent, DragStartEvent } from "@dnd-kit/core";
 import { Flex, Text } from "@mantine/core";
 import { useForm, UseFormReturnType } from "@mantine/form";
 import { LegacyRef, useRef, useState } from "react";
-import { useNavigate } from "react-router-dom";
 import {
   JumbotronRecord,
   ThreeGridRecord,
@@ -19,7 +18,7 @@ import { WEBCOMPONENTTYPE } from "./utils/webComponentType";
 export default function FunnelScreen2() {
   const droppableRef: LegacyRef<HTMLDivElement> | undefined = useRef(null);
   const [activeSection, setActiveSection] = useState<number | null>(null);
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   //nanti abis ini caritau cara ubah form didalem useForm ini
   const funnelsForm: UseFormReturnType<FunnelForm> = useForm<FunnelForm>({
@@ -165,7 +164,7 @@ export default function FunnelScreen2() {
           gap: 24,
         }}
       >
-        <button style={{borderRadius: "8px"}} onClick={() => navigate(-1)}>back</button>
+        {/* <button style={{borderRadius: "8px"}} onClick={() => navigate(-1)}>back</button> */}
         <Text size={"xl"} ta={"center"} fw={700}>
           Okeo Funnel v2
         </Text>

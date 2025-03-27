@@ -157,7 +157,14 @@ export default function DroppableSection({
                                   <Textarea
                                     autosize
                                     styles={{
-                                      input: {backgroundColor: 'transparent', outline: 'none', border: 'none'},
+                                      input: {
+                                        outline: "none",
+                                        background: "transparent",
+                                        border: "none",
+                                        fontSize: "24px",
+                                        textAlign: getAlignText(index),
+                                        fontWeight: 700,
+                                      },
                                     }}
                                     placeholder="Your Title"
                                     {...funnelsForm.getInputProps(
@@ -168,7 +175,14 @@ export default function DroppableSection({
                                     autosize
                                     className={style.subtitleBanner}
                                     styles={{
-                                      input: {backgroundColor: 'transparent', outline: 'none', border: 'none'},
+                                      input: {
+                                        outline: "none",
+                                        background: "transparent",
+                                        border: "none",
+                                        fontSize: "18px",
+                                        textAlign: getAlignText(index),
+                                        fontWeight: 600,
+                                      },
                                     }}
                                     placeholder="Your Subtitle"
                                     {...funnelsForm.getInputProps(
@@ -206,30 +220,28 @@ export default function DroppableSection({
                               id={index.toString()}
                               value={component}
                             >
-                              <Flex w={"100%"}>
-                                <BackgroundImage
-                                  src={
-                                    (component as ThreeGridRecord).background1!
-                                  }
-                                  h={200}
-                                  w={"calc(100%/3)"}
-                                >
-                                  <Stack
+                              <Flex w={"100%"} h={"100%"}>
+                                <div>
+                                  <BackgroundImage
+                                    src={
+                                      (component as ThreeGridRecord)
+                                        .background1!
+                                    }
                                     h={"100%"}
-                                    gap={0}
-                                    px={8}
-                                    align={getAlignFlex(index)}
-                                    justify={"center"}
+                                    w={"100%"}
                                   >
-                                    <input
+                                    <Textarea
+                                      autosize
                                       className={style.titleBanner}
-                                      style={{
-                                        outline: "none",
-                                        background: "transparent",
-                                        border: "none",
-                                        fontSize: "24px",
-                                        textAlign: getAlignText(index),
-                                        fontWeight: 700,
+                                      styles={{
+                                        input: {
+                                          outline: "none",
+                                          background: "transparent",
+                                          border: "none",
+                                          fontSize: "24px",
+                                          textAlign: getAlignText(index),
+                                          fontWeight: 700,
+                                        },
                                       }}
                                       placeholder="Your Title"
                                       {...funnelsForm.getInputProps(
@@ -246,31 +258,29 @@ export default function DroppableSection({
                                         ) as Property.TextAlign
                                       }
                                     />
-                                  </Stack>
-                                </BackgroundImage>
-                                <BackgroundImage
-                                  src={
-                                    (component as ThreeGridRecord).background2!
-                                  }
-                                  h={200}
-                                  w={"calc(100%/3)"}
-                                >
-                                  <Stack
+                                  </BackgroundImage>
+                                </div>
+                                <div>
+                                  <BackgroundImage
+                                    src={
+                                      (component as ThreeGridRecord)
+                                        .background2!
+                                    }
                                     h={"100%"}
-                                    gap={0}
-                                    px={8}
-                                    align={getAlignFlex(index)}
-                                    justify={"center"}
+                                    w={"100%"}
                                   >
-                                    <input
+                                    <Textarea
+                                      autosize
                                       className={style.titleBanner}
-                                      style={{
-                                        outline: "none",
-                                        background: "transparent",
-                                        border: "none",
-                                        fontSize: "24px",
-                                        textAlign: getAlignText(index),
-                                        fontWeight: 700,
+                                      styles={{
+                                        input: {
+                                          outline: "none",
+                                          background: "transparent",
+                                          border: "none",
+                                          fontSize: "24px",
+                                          textAlign: getAlignText(index),
+                                          fontWeight: 700,
+                                        },
                                       }}
                                       placeholder="Your Title"
                                       {...funnelsForm.getInputProps(
@@ -287,31 +297,29 @@ export default function DroppableSection({
                                         ) as Property.TextAlign
                                       }
                                     />
-                                  </Stack>
-                                </BackgroundImage>
-                                <BackgroundImage
-                                  src={
-                                    (component as ThreeGridRecord).background3!
-                                  }
-                                  h={200}
-                                  w={"calc(100%/3)"}
-                                >
-                                  <Stack
+                                  </BackgroundImage>
+                                </div>
+                                <div>
+                                  <BackgroundImage
+                                    src={
+                                      (component as ThreeGridRecord)
+                                        .background1!
+                                    }
                                     h={"100%"}
-                                    gap={0}
-                                    px={8}
-                                    align={getAlignFlex(index)}
-                                    justify={"center"}
+                                    w={"100%"}
                                   >
-                                    <input
+                                    <Textarea
+                                      autosize
                                       className={style.titleBanner}
-                                      style={{
-                                        outline: "none",
-                                        background: "transparent",
-                                        border: "none",
-                                        fontSize: "24px",
-                                        textAlign: getAlignText(index),
-                                        fontWeight: 700,
+                                      styles={{
+                                        input: {
+                                          outline: "none",
+                                          background: "transparent",
+                                          border: "none",
+                                          fontSize: "24px",
+                                          textAlign: getAlignText(index),
+                                          fontWeight: 700,
+                                        },
                                       }}
                                       placeholder="Your Title"
                                       {...funnelsForm.getInputProps(
@@ -328,8 +336,8 @@ export default function DroppableSection({
                                         ) as Property.TextAlign
                                       }
                                     />
-                                  </Stack>
-                                </BackgroundImage>
+                                  </BackgroundImage>
+                                </div>
                               </Flex>
                             </DraggableWithToggle>
                           </Droppable>
@@ -363,25 +371,30 @@ export default function DroppableSection({
                                 src={
                                   (component as CallToActionRecord).background!
                                 }
-                                h={200}
+                                h={"100%"}
                                 w={"100%"}
                               >
                                 <Stack
                                   h={"100%"}
+                                  w={"100%"}
                                   gap={0}
                                   px={8}
+                                  py={24}
                                   align={"center"}
                                   justify={"center"}
                                 >
-                                  <input
+                                  <Textarea
+                                    autosize
                                     className={style.titleBanner}
-                                    style={{
-                                      outline: "none",
-                                      background: "transparent",
-                                      border: "none",
-                                      fontSize: "24px",
-                                      textAlign: "center",
-                                      fontWeight: 700,
+                                    styles={{
+                                      input: {
+                                        outline: "none",
+                                        background: "transparent",
+                                        border: "none",
+                                        fontSize: "24px",
+                                        textAlign: "center",
+                                        fontWeight: 700,
+                                      },
                                     }}
                                     placeholder="Call To Action Title"
                                     {...funnelsForm.getInputProps(
@@ -395,15 +408,18 @@ export default function DroppableSection({
                                       borderRadius: "12px",
                                     }}
                                   >
-                                    <input
+                                    <Textarea
+                                      autosize
                                       className={style.subtitleBanner}
-                                      style={{
-                                        outline: "none",
-                                        background: "transparent",
-                                        border: "none",
-                                        fontSize: "18px",
-                                        textAlign: getAlignText(index),
-                                        fontWeight: 600,
+                                      styles={{
+                                        input: {
+                                          outline: "none",
+                                          background: "transparent",
+                                          border: "none",
+                                          fontSize: "18px",
+                                          textAlign: getAlignText(index),
+                                          fontWeight: 600,
+                                        },
                                       }}
                                       placeholder="Button Message"
                                       {...funnelsForm.getInputProps(
