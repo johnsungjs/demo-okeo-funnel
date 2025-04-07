@@ -44,7 +44,7 @@ export default function DraggableSection() {
             borderColor: "grey",
             borderStyle: "solid",
             padding: "8px 24px",
-            marginBottom: "16px",
+            marginBottom: "13px",
             opacity: "50%",
           }}
         >
